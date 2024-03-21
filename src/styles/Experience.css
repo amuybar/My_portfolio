@@ -1,0 +1,18 @@
+/* Experience.css */
+
+.experience {
+    padding: 20px;
+  }
+  
+  .experience-item {
+    margin-bottom: 20px;
+  }
+  
+  .experience-item h3 {
+    margin-bottom: 5px;
+  }
+  
+  .experience-item p {
+    margin: 0;
+  }
+  

@@ -1,0 +1,27 @@
+/* ProjectDetail.css */
+
+.project-detail {
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    
+  }
+  
+  .project-detail h2 {
+    margin-bottom: 10px;
+  }
+  
+  .project-detail p {
+    margin-bottom: 20px;
+  }
+  
+  .project-detail .cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  

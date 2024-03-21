@@ -1,0 +1,23 @@
+/* Skills.css */
+
+.skills {
+    padding: 20px;
+  }
+  
+  .skill-category {
+    margin-bottom: 20px;
+  }
+  
+  .skill-category h3 {
+    margin-bottom: 10px;
+  }
+  
+  .skill-category ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skill-category ul li {
+    margin-bottom: 5px;
+  }
+  

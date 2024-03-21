@@ -1,0 +1,46 @@
+/* Testimonials.css */
+
+.testimonials {
+    padding: 20px;
+  }
+  
+  .testimonials h2 {
+    margin-bottom: 10px;
+  }
+  
+  .testimonials p {
+    margin-bottom: 10px;
+  }
+  
+  .testimonials ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .testimonials ul li {
+    margin-bottom: 10px;
+  }
+  
+  .post-testimonial input,
+  .post-testimonial textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    color: yellowgreen;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .post-testimonial button{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .post-testimonial textarea {
+    height: 100px; /* Adjust height as needed */
+  }
+  

@@ -1,0 +1,32 @@
+/* Portfolio.css */
+
+.portfolio {
+    padding: 20px;
+  }
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Use CSS Grid for flexible list view */
+    gap: 20px;
+  }
+  
+  .project-card {
+    border: 0.1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .project-card img {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .project-card h3 {
+    padding: 10px;
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+  }
+  

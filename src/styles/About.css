@@ -1,0 +1,18 @@
+/* About.css */
+
+.about {
+    padding: 20px;
+    background-color: tran;
+   
+  }
+  
+  .about h2 {
+    margin-bottom: 10px;
+  }
+  
+  .about p {
+    margin-bottom: 0;
+    font-size: 17px;
+    
+  }
+  
