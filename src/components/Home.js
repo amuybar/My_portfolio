@@ -38,7 +38,7 @@ function Home() {
   return (
     <div className="home">
       <div className="description">
-        <h2>Welcome to My Portfolio</h2>
+        <h1>Welcome to My Portfolio</h1>
         <p>
         Hello! I'm Barry, a passionate junior developer with a strong enthusiasm for coding and problem-solving. 
         </p>
