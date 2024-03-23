@@ -2,18 +2,14 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
-import Home from './components/Home.js';
-import About from './components/About.js';
-import Portfolio from './components/Portfolio.js';
-import ProjectDetail from './components/ProjectDetail.js';
-import Contact from './components/Contact.js';
-import Skills from './components/Skills.js';
-import Experience from './components/Experience.js';
-import Education from './components/Education.js';
-import Testimonials from './components/Testimonials.js';
+
 import NotFound from './components/NotFound.js';
+import BlogPage from './pages/Blog.js';
 
 import './App.css'
+import Homepage from './pages/Homepage.js';
+import Blog from './components/blog.js';
+import CreatePost from './components/CreatePost.js';
 
 function App() {
 
@@ -29,17 +25,14 @@ function App() {
     <div className={`App ${theme}`}>
       <Header toggleTheme={toggleTheme} />
       <main>
-        <Home />
-        <About/>
-        <Portfolio />
-        <ProjectDetail />
-        <Contact />
-        <Skills />
-        <Experience />
-        <Education />
-        <Testimonials />
+       
        <Routes>
-         <Route component={NotFound} />
+         <Route element={<NotFound/>} />
+         <Route path="/blog" element={<BlogPage />} />
+         <Route path="/blogdetail" element={<Blog />} />
+         <Route path="/" element={<Homepage />} />
+         <Route path="/blogdetail" element={<Blog />} />
+         <Route path="/create-post" element={<CreatePost />} />
        </Routes>
       </main>
       <Footer />

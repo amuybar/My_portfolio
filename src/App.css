@@ -1,6 +1,6 @@
 :root {
-  --background-color: #370247;
-  --text-color: #0D9276;
+  --background-color: #3c5561;
+  --text-color: #f8f8f8;
 }
 
 .App.dark {
@@ -14,6 +14,10 @@ body, html {
   padding: 0;
   height: 100%;
   width: 100%;
+  font-weight: 300;
+  font-size: 18;
+  letter-spacing: 0.1rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .App {

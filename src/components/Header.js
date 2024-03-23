@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect} from 'react';
 import { FaBars,} from 'react-icons/fa';
 import { alpha, styled } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
+import {  Link } from 'react-router-dom';
 
 import { pink } from '@mui/material/colors';
 import '../styles/Header.css'
@@ -60,13 +61,13 @@ function Header({ toggleTheme }) {
           {/* For larger screens: Display navigation buttons */}
           <nav ref={menuRef} className={showMenu ? 'nav-menu active' : 'nav-menu'}>
           <ul>
-              <li><a href="#about">About</a></li>
+          <li>
+             <Link to="/">Home</Link></li>
+              <li> <Link to="/blog">Blog</Link></li>
               <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li> <Link to="/#contact">Contact</Link></li>
               <li><a href="#project">Project</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#education">Education</a></li>
-              
+             
             </ul>
           </nav>
         </div>
