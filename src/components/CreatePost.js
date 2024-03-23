@@ -12,7 +12,7 @@ function CreatePost() {
 
     try {
       // Insert new blog post into Supabase
-      const { data, error } = await supabase
+      const {  error } = await supabase
         .from('posts')
         .insert([{ title, content }]);
       if (error) {
