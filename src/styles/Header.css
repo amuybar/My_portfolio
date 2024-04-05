@@ -1,95 +1,100 @@
-
-
 header {
-    background-color: transparent;
-    position: relative;
-    padding: 20px;
-  }
-  .header-left{
-    display: flex; 
-    flex: row;
-  }
-  
-  .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .switch {
-    margin-right: 20px;
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .name {
-    font-size: 24px;
-  }
-  
-  .theme-toggle {
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  .menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  .nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    align-content: center;
-    height: 40vh;
-    background-color: #3c5561;;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(243, 243, 243, 0.2);
-    z-index: 1000;
-    display: none;
-  }
-  
- 
-  .nav-menu.active {
-    display: block;
-  }
-  
- 
-  .nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: block;
-    align-items: center;
-    
-  }
-  
-  .nav-menu ul li {
-    margin-bottom: 10px;
-  }
-  
-  .nav-menu ul li a {
-    display: block;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(243, 243, 243, 0.9);
-    
-    text-decoration: none;
-    color: #20474d;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    font-size: 23px;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-menu ul li a:hover {
-    color: #555;
-  }
+  background-color: transparent;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding elevation to the header */
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row; /* Corrected typo: changed "flex" to "flex-direction" */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch {
+  margin-right: 20px;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: 24px;
+}
+
+.theme-toggle {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0;
+  right: 0; /* Aligning the dropdown menu to the right */
+  width: 250px; /* Setting a fixed width */
+  height: 100vh; /* Covering the entire height */
+  background-color: #3c5561;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adding elevation to the dropdown */
+  z-index: 1000;
+  display: none;
+}
+
+.nav-menu.active {
+  display: block;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  align-items: center;
+}
+
+.nav-menu ul li {
+  margin-bottom: 10px;
+}
+
+.nav-menu ul li a {
+  display: block;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(243, 243, 243, 0.9);
+  text-decoration: none;
+  color: #20474d;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #555;
+}
+
+.search-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px; /* Adding margin to separate search icon from the menu icon */
+  color: white;
+}

@@ -35,6 +35,6 @@ body, html {
 
 
 main {
-  padding: 20px;
+  padding: 0;
   flex: 1;
 }
