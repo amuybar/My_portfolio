@@ -2,7 +2,8 @@ import React from 'react';
 import '../styles/Contact.css'
 function Contacts() {
   return (
-    <div className="contacts">
+    <div className="contacts" >
+        <div class="ribbon"><span>Reach Out</span></div>
       <h2>Contact Information</h2>
       <div className="contact-info">
         <div className="contact-item">

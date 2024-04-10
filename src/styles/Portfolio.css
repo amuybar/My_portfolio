@@ -11,10 +11,31 @@
   }
   
   .project-card {
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    --b:20px;  
+    --a:290deg; 
+    --p:25px; 
+    
+    --g:#0000 var(--a),#000 0;
+    width: 100%;    
+    padding: calc(var(--b) + var(--p));
+    margin:  10px;
+    display:flex;
+    box-sizing: border-box;
+    background:linear-gradient(45deg,rgb(11, 112, 82),rgb(8, 113, 151));
+    -webkit-mask:
+      conic-gradient(from calc(var(--a)/-2 -  45deg) at top    var(--b) left  var(--b),var(--g)) 0    0,
+      conic-gradient(from calc(var(--a)/-2 +  45deg) at top    var(--b) right var(--b),var(--g)) 100% 0,
+      conic-gradient(from calc(var(--a)/-2 - 135deg) at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+      conic-gradient(from calc(var(--a)/-2 + 135deg) at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+            mask:
+      conic-gradient(from calc(var(--a)/-2 -  45deg) at top    var(--b) left  var(--b),var(--g)) 0    0,
+      conic-gradient(from calc(var(--a)/-2 +  45deg) at top    var(--b) right var(--b),var(--g)) 100% 0,
+      conic-gradient(from calc(var(--a)/-2 - 135deg) at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+      conic-gradient(from calc(var(--a)/-2 + 135deg) at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+    -webkit-mask-size:50.1% 50.1%;
+            mask-size:50.1% 50.1%;
+    -webkit-mask-repeat:no-repeat;
+            mask-repeat:no-repeat;
   }
   
   .project-card img {
@@ -29,5 +50,8 @@
     margin: 0;
     background-color: transparent;
     text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
   }
   

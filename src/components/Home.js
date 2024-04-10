@@ -21,8 +21,8 @@ function Home() {
         </div>
       </div>
       <div className="right-child">
-        <div className="description">
-          <h1>Welcome Barrack Amuyunzu Portfolio</h1>
+        <div className="description" >
+          <h1>Welcome Barrack To Amuyunzu Portfolio</h1>
           <p>
           Hello, I am Barrack, a enthusiastic junior developer with great interest in React and Node js. Currently learning the development spectrum, From Python django and Dart Flutter to Automation with Selenium . Open to more exploration as i Learn more on this Industry.
           </p>

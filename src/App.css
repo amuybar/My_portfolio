@@ -9,32 +9,26 @@
   --text-color: #FE7A36; 
 }
 
-body, html {
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-  font-weight: 300;
-  font-size: 18;
-  letter-spacing: 0.1rem;
+  min-width: 100%;
+  overflow-x: hidden;
+  --size: 5px;
+  background: conic-gradient(#000000 0.03turn, rgba(4, 66, 95, 0.9) 0);
+  background-size: var(--size) var(--size);
+  animation: moveConic 100s linear infinite; 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
-.App {
-  margin-top: 0px;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
+@keyframes moveConic {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: 100% 100%;
+  }
 }
 
 
 
 
-main {
-  padding: 0;
-  flex: 1;
-}

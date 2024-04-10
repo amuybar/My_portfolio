@@ -1,7 +1,32 @@
 /* Testimonials.css */
 
 .testimonials {
-    padding: 20px;
+    
+  --b:50px;  
+  --a:45deg; 
+  --p:20px; 
+  
+  --g:#0000 var(--a),#000 0;
+  max-width: 100%;   
+  padding: calc(var(--b) + var(--p));
+  margin:  20px;
+  box-sizing: border-box;
+  background:linear-gradient(45deg,rgb(6, 235, 166),rgb(8, 113, 151));
+  
+  -webkit-mask:
+    conic-gradient(from calc(var(--a)/-2 -  45deg) at top    var(--b) left  var(--b),var(--g)) 0    0,
+    conic-gradient(from calc(var(--a)/-2 +  45deg) at top    var(--b) right var(--b),var(--g)) 100% 0,
+    conic-gradient(from calc(var(--a)/-2 - 135deg) at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+    conic-gradient(from calc(var(--a)/-2 + 135deg) at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+          mask:
+    conic-gradient(from calc(var(--a)/-2 -  45deg) at top    var(--b) left  var(--b),var(--g)) 0    0,
+    conic-gradient(from calc(var(--a)/-2 +  45deg) at top    var(--b) right var(--b),var(--g)) 100% 0,
+    conic-gradient(from calc(var(--a)/-2 - 135deg) at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+    conic-gradient(from calc(var(--a)/-2 + 135deg) at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+  -webkit-mask-size:50.1% 50.1%;
+          mask-size:50.1% 50.1%;
+  -webkit-mask-repeat:no-repeat;
+          mask-repeat:no-repeat;
   }
   
   .testimonials h2 {
@@ -26,7 +51,6 @@
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: transparent;
     color: yellowgreen;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -41,6 +65,6 @@
   }
   
   .post-testimonial textarea {
-    height: 100px; /* Adjust height as needed */
+    height: 100px; 
   }
   

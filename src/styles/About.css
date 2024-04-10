@@ -1,9 +1,32 @@
 /* About.css */
 
 .about {
-    padding: 20px;
-    background-color: tran;
-   
+    
+    --b:20px;  
+    --a:180deg; 
+    --p:20px; 
+    
+    --g:#0000 var(--a),#000 0;
+    width: 100%;    
+    padding: calc(var(--b) + var(--p));
+    margin:  10px;
+    display:inline-block;
+    box-sizing: border-box;
+    background:linear-gradient(45deg,rgb(127, 204, 248),rgb(197, 234, 247));
+    -webkit-mask:
+      conic-gradient(from calc(var(--a)/-2 -  45deg) at top    var(--b) left  var(--b),var(--g)) 0    0,
+      conic-gradient(from calc(var(--a)/-2 +  45deg) at top    var(--b) right var(--b),var(--g)) 100% 0,
+      conic-gradient(from calc(var(--a)/-2 - 135deg) at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+      conic-gradient(from calc(var(--a)/-2 + 135deg) at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+            mask:
+      conic-gradient(from calc(var(--a)/-2 -  45deg) at top    var(--b) left  var(--b),var(--g)) 0    0,
+      conic-gradient(from calc(var(--a)/-2 +  45deg) at top    var(--b) right var(--b),var(--g)) 100% 0,
+      conic-gradient(from calc(var(--a)/-2 - 135deg) at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+      conic-gradient(from calc(var(--a)/-2 + 135deg) at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+    -webkit-mask-size:50.1% 50.1%;
+            mask-size:50.1% 50.1%;
+    -webkit-mask-repeat:no-repeat;
+            mask-repeat:no-repeat;
   }
   
   .about h2 {
