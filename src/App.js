@@ -10,6 +10,8 @@ import './App.css'
 import Homepage from './pages/Homepage.js';
 import Blog from './components/blog.js';
 import CreatePost from './components/CreatePost.js';
+import Login from './pages/Login.js';
+import Register from './pages/Register.js';
 
 function App() {
 
@@ -33,6 +35,8 @@ function App() {
          <Route path="/" element={<Homepage />} />
          <Route path="/blogdetail" element={<Blog />} />
          <Route path="/create-post" element={<CreatePost />} />
+         <Route path='/login' element={<Login />}/>
+         <Route path='/register' element={<Register />}/>
        </Routes>
       </main>
       <Footer />
