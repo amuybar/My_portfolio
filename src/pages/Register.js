@@ -12,7 +12,7 @@ const Register = () => {
   async function register(email, password, name) {
     try {
       await account.create(ID.unique(), email, password, name);
-      // Handle successful registration (e.g., show success message)
+      
     } catch (err) {
       setError(err.message);
     }

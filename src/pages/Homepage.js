@@ -20,6 +20,10 @@ function Homepage() {
         <Experience />
         <Education />
         <Testimonials />
+        <div className="auth-btn">
+          <a href="/login">Login</a>
+          <a href="/signup">Sign Up</a>
+        </div>
     </div>
   )
 }
