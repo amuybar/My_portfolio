@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { account, ID } from '../../lib/appwrite';
+import { account, ID } from '../lib/appwrite';
 import '../styles/Register.css';
 
 

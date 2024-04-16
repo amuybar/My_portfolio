@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { account } from '../../lib/appwrite';
+import { account } from '../lib/appwrite';
 import '../styles/Login.css'
 
 const Login = () => {
