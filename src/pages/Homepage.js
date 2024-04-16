@@ -22,7 +22,7 @@ function Homepage() {
         <Testimonials />
         <div className="auth-btn">
           <a href="/login">Login</a>
-          <a href="/signup">Sign Up</a>
+          <a href="/register">Sign Up</a>
         </div>
     </div>
   )
