@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import { account } from '../lib/appwrite';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css'
 
 const Login = () => {
+  const [loggedInUser, setLoggedInUser] = useState(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+ const navigate=useNavigate();
+
+
 
   async function login(email, password) {
     try {
       await account.createEmailSession(email, password);
-      // Handle successful login (e.g., redirect to dashboard)
+      setLoggedInUser(await account.get());
+      navigate('/');
     } catch (err) {
       setError(err.message);
     }
@@ -18,6 +24,9 @@ const Login = () => {
 
   return (
     <div className="login-container">
+          <p>
+        {loggedInUser ? `Logged in as ${loggedInUser.name}` : 'Not logged in'}
+      </p>
       <h2>Login</h2>
       {error && <p className="error-message">{error}</p>}
       <form onSubmit={(e) => e.preventDefault()}>

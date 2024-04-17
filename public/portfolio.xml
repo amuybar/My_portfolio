@@ -14,11 +14,28 @@
           <priority>0.8</priority>
     </url>
      <url>
-          <loc>hhttps://amuyunzubarrac.club/blog/</loc>
+          <loc>https://amuyunzubarrac.club/blog/</loc>
           <lastmod>2024-03-22T02:44:58+00:00</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
     </url>
-
+ <url>
+          <loc>https://amuyunzubarrac.club/register/</loc>
+          <lastmod>2024-03-22T02:44:58+00:00</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+    </url>
+     <url>
+          <loc>https://amuyunzubarrac.club/login/</loc>
+          <lastmod>2024-03-22T02:44:58+00:00</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+    </url>
+     <url>
+          <loc>https://amuyunzubarrac.club/create-post/</loc>
+          <lastmod>2024-03-22T02:44:58+00:00</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+    </url>
 
 </urlset>

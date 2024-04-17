@@ -1,46 +1,49 @@
 import React, { useState, useEffect } from 'react';
-import { supabase } from '../api/supabase'; // Import Supabase client
-import { Link } from 'react-router-dom'; // Import Link for navigation
+
 import '../styles/Blog.css';
+import { getBlogs } from '../lib/config';
 
 function BlogPage() {
-  const [posts, setPosts] = useState([]);
+  const [blogs, setBlogs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Initial loading state
 
   useEffect(() => {
-    // Fetch blog posts from Supabase
-    async function fetchPosts() {
+    const fetchBlogs = async () => {
       try {
-        const { data, error } = await supabase
-          .from('posts')
-          .select('*');
-        if (error) {
-          throw error;
-        }
-        setPosts(data);
-      } catch (error) {
-        console.error('Error fetching posts:', error.message);
+        const fetchedBlogs = await getBlogs();
+        setBlogs(fetchedBlogs);
+      } catch (e) {
+        console.error(e.message);
+      } finally {
+        setIsLoading(false); // Set loading state to false after fetching (success or error)
       }
-    }
+    };
 
-    fetchPosts();
+    fetchBlogs(); // Call the function on component mount
   }, []);
 
   return (
     <div className="blog-container">
       <header>
         <h1>My Blog</h1>
-        <Link to="/create-post" className="create-post-btn">Create New Post</Link>
+        <a href="/create-post" className="create-post-btn">Create New Post</a>
       </header>
-      <div className="blog-list">
-        {posts.map(post => (
-          <Link to={`/post/${post.id}`} key={post.id} className="blog-card-link">
-            <div className="blog-card">
-              <img src={post.image} alt={post.title} />
-              <h2>{post.title}</h2>
-              <p>{post.summary}</p>
-            </div>
-          </Link>
-        ))}
+      <div className="blog-container">
+        <h1>Blog Posts</h1>
+        {isLoading ? ( // Display loading indicator while fetching
+          <p>Loading posts...</p>
+        ) : (
+          blogs.length > 0 ? (
+            blogs.map((post) => (
+              <div key={post.$id} className="post">
+                <h2><a href={`/post/${post.slug}`}>{post.title}</a></h2> {/* Link to post detail page */}
+                <p>{post.summary}</p>
+              </div>
+            ))
+          ) : (
+            <p>No blog posts found!</p>
+          )
+        )}
       </div>
     </div>
   );

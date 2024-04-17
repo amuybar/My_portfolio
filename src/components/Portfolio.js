@@ -6,19 +6,25 @@ function Portfolio() {
   const projects = [
     {
       id: 1,
+      title: 'Real Estate Listing',
+      imageUrl: '/images/Screenshot from 2024-04-17 05-44-31.png',
+      projectUrl: 'https://realeastatelisting.netlify.app/'
+    },
+    {
+      id: 2,
       title: 'Todo App',
       imageUrl: '/images/todo.png',
-      projectUrl: '/images/public/images/Screenshot from 2024-04-10 13-47-11.png'
+      projectUrl: 'https://plptodo.netlify.app/'
     },
     
     {
-      id: 2,
+      id: 3,
       title: 'Computer Accessories Website',
       imageUrl: '/images/Screenshot from 2024-02-28 10-44-45.png',
       projectUrl: 'https://computeraccessories.netlify.app'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Burned Meat Website',
       imageUrl: '/images/brd.png',
       projectUrl: 'https://roastymeat.netlify.app/'
